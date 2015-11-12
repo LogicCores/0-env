@@ -18,11 +18,7 @@ exports.forLib = function (LIB) {
 
                     return LIB.Promise.resolve({
                         getConfig: function () {
-                            return LIB.Promise.resolve(
-                                ccjson.makeDetachedFunction(function () {
-                                    return config;
-                                })
-                            );
+                            return config;
                         }
                     });
                 }
